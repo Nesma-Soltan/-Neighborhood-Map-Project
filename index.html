@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+   <html lang="En">
+          <head>
+                <meta charset="UTF-8">
+                <title>Neighborhood Map Project</title>
+                <meta name="viewport" content="width=device-width,initial-scale=1">
+                <link rel="stylesheet" type="text/css" href="css/style.css">
+          </head>
+          <body>
+              <div class="container">
+                    <aside class="options">
+                        <header>
+
+                              <h3 class="header_title">Neighborhood Map Project:-</h3>
+                              <a id="menu" class="header_menu">&#9776;</a>
+                        </header>
+                           <div class="searchbar" id="searchbar">
+                               <input type='text' id="textplace" placeholder="Please Enter The Location... " data-bind="value: searchTitle, valueUpdate:'afterkeydown'" >
+                            </div>
+                            <div>
+                                    <h4 id="select"> Select Egypt City Places :-</h4>
+                                    <nav  id="draw" class="nav">
+                                        <ul class="nav_list" data-bind="foreach: listPlaces">
+                                                <li class="nav_item" data-bind="text: title , click: $parent.changeLocation"></li>
+                                        </ul>
+                                    </nav>
+                            </div>
+                     </aside>
+                    <main id = "map">
+                    </main>
+              </div>
+           <script src="js/knockout-3.4.2.js"></script>
+           <script  src="js/jquery.min.js"></script>
+           <script src="js/app.js"></script>
+           <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2rdrVW3TW1Xi05TGTBwEw4qtB0NSYKuw&callback=initMap"
+             onerror="errorHandling()"></script>
+        </body>
+  </html>
